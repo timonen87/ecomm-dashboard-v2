@@ -14,7 +14,7 @@ import { Auth } from 'src/auth/decorators/auth.decorators';
 import { CurrentUser } from 'src/user/decorators/user.decorators';
 import { ReviewDto } from './dto/review.dto';
 
-@Controller('review')
+@Controller('reviews')
 export class ReviewController {
   constructor(private readonly reviewService: ReviewService) {}
 

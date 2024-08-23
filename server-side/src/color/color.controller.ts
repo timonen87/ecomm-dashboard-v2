@@ -14,7 +14,7 @@ import { ColorService } from './color.service';
 import { Auth } from 'src/auth/decorators/auth.decorators';
 import { ColorDto } from './dto/color.dto';
 
-@Controller('color')
+@Controller('colors')
 export class ColorController {
   constructor(private readonly colorService: ColorService) {}
 
