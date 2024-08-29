@@ -13,6 +13,6 @@
   "aliases": {
     "components": "@/components",
     "shared": "@/shared",
-    "utils": "@/utils/clsx"
+    "utils": "@/shared/utils/clsx"
   }
 }
