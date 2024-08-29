@@ -1,9 +1,10 @@
-
+import { Hero } from '@//widgets/hero/Hero'
 
 export function Home() {
 	return (
 		<>
-			<div className="text-3xl">Home</div>
+			<Hero />
+			<div className='text-3xl'>Home</div>
 		</>
 	)
 }

@@ -7,11 +7,14 @@ import {
 	Res,
 	HttpCode,
 	Post,
-	UnauthorizedException
+	UnauthorizedException,
+	Get,
+	UseGuards
 } from '@nestjs/common'
 import { AuthService } from './auth.service'
 import { AuthDto } from './dto/auth.dto'
 import { Request, Response } from 'express'
+import { AuthGuard } from '@nestjs/passport'
 
 @Controller('auth')
 export class AuthController {
@@ -67,10 +70,50 @@ export class AuthController {
 		return response
 	}
 
-  @HttpCode(200)
+  	@HttpCode(200)
 	@Post('logout')
 	async logout(@Res({ passthrough: true }) res: Response) {
 		this.authService.removeRefreshTokenToResponse(res)
 		return true
+	}
+
+	@Get('google')
+	@UseGuards(AuthGuard('google'))
+	async googleAuth(@Req() req) {}
+
+	@Get('google/callback')
+	@UseGuards(AuthGuard('google'))
+	async googleAuthCallback(
+		@Req() req,
+		@Res({ passthrough: true }) res: Response
+	) {
+		const { refreshToken, ...response } =
+			await this.authService.validateOAuthLogin(req)
+
+		this.authService.addRefreshTokenToResponse(res, refreshToken)
+
+		return res.redirect(
+			`${process.env['CLIENT_URL']}/dashboard?accessToken=${response.accessToken}`
+		)
+	}
+
+	@Get('yandex')
+	@UseGuards(AuthGuard('yandex'))
+	async yandexAuth(@Req() req) {}
+
+	@Get('yandex/callback')
+	@UseGuards(AuthGuard('yandex'))
+	async yandexAuthCallback(
+		@Req() req,
+		@Res({ passthrough: true }) res: Response
+	) {
+		const { refreshToken, ...response } =
+			await this.authService.validateOAuthLogin(req)
+
+		this.authService.addRefreshTokenToResponse(res, refreshToken)
+
+		return res.redirect(
+			`${process.env['CLIENT_URL']}/dashboard?accessToken=${response.accessToken}`
+		)
 	}
 }

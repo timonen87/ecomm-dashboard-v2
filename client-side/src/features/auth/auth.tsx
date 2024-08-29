@@ -3,16 +3,21 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import styles from './Auth.module.scss'
-import { AuthFields } from './_ui/auth-form'
-
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@//shared/ui/Card'
-
-import { Social } from './_ui/social-button'
-import { useAuthForm } from './_vm/use-auth-form'
-import { Button } from '@//shared/ui/Button'
+import { Button } from '@//shared/ui/button'
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle
+} from '@//shared/ui/card'
 import { Form } from '@//shared/ui/form-elements/form'
 
+import styles from './Auth.module.scss'
+import { AuthFields } from './_ui/auth-form'
+import { Social } from './_ui/social-button'
+import { useAuthForm } from './_vm/use-auth-form'
 
 export function Auth() {
 	const [isReg, setIsReg] = useState(false)
@@ -24,7 +29,7 @@ export function Auth() {
 			<div className={styles.left}>
 				<Image
 					src='/images/auth.svg'
-					alt='TeaShop auth'
+					alt='Ecomm auth'
 					width={100}
 					height={100}
 				/>
