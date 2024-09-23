@@ -2,12 +2,15 @@ import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
+import Header from '../widgets/app-header/app-header'
+
 import {
 	SITE_DESCRIPTION,
 	SITE_NAME
 } from './../shared/constants/seo.constants'
 import './globals.scss'
 import { Providers } from './providers'
+import { Footer } from '../widgets/layouts/main-layout/footer/Footer'
 
 export const metadata: Metadata = {
 	title: {
@@ -28,13 +31,11 @@ export default function RootLayout({
 			<body
 				className={`bg-[#FCFCFC] dark:bg-black ${GeistSans.variable}`}
 			>
-				<ThemeProvider
-					attribute='class'
-					enableSystem={false}
-					defaultTheme='dark'
-				>
+				<Providers>
+					<Header />
 					{children}
-				</ThemeProvider>
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	)

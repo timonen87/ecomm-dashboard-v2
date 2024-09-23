@@ -2,4 +2,4 @@ export const NO_INDEX_PAGE = { robots: { index: false, follow: false } }
 
 export const SITE_NAME = 'NETLIFY'
 export const SITE_DESCRIPTION =
-	'Discover a wide range of high-quality Next.js templates for your web projects. Choose from our selection of free, open-source, and premium options to build stunning and functional Next.js websites and web apps effortlessly. Explore a diverse collection of handcrafted and ready-to-use templates and starters to kickstart your next project quickly — built with the latest Next.js, React 18, and TypeScript for optimal performance and ease of use.'
+	'Откройте для себя широкий выбор высококачественных шаблонов Next.js для ваших веб-проектов. Выбирайте из нашего ассортимента бесплатных, с открытым исходным кодом и премиум-версий, чтобы создавать потрясающие и функциональные Next.js веб-сайты и веб-приложения без особых усилий. Ознакомьтесь с разнообразной коллекцией готовых к использованию шаблонов ручной работы, которые помогут быстро запустить ваш следующий проект, созданный с использованием новейших технологий Next.js, React 18 и TypeScript для '

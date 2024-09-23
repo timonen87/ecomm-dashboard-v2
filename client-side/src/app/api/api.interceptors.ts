@@ -10,6 +10,8 @@ import axios, { CreateAxiosDefaults } from 'axios'
 
 import { errorCatch, getContentType } from './api.hepler'
 import { SERVER_URL } from '@//shared/config/api.config'
+import { authService } from '@//features/auth/auth.service'
+import { getAccessToken, removeFromStorage } from '@//features/auth/auth-token.service'
 
 const options: CreateAxiosDefaults = {
 	baseURL: SERVER_URL,

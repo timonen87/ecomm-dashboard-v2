@@ -1,7 +1,7 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
+import { ThemeProvider } from 'next-themes'
 import { type PropsWithChildren, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { Provider } from 'react-redux'
@@ -21,7 +21,11 @@ export function Providers({ children }: PropsWithChildren) {
 	)
 
 	return (
-
+		<ThemeProvider
+			attribute='class'
+			enableSystem={false}
+			defaultTheme='dark'
+		>
 			<QueryClientProvider client={client}>
 				<Provider store={store}>
 					<PersistGate loading={null} persistor={persistor}>
@@ -30,6 +34,6 @@ export function Providers({ children }: PropsWithChildren) {
 					</PersistGate>
 				</Provider>
 			</QueryClientProvider>
-
+		</ThemeProvider>
 	)
 }
