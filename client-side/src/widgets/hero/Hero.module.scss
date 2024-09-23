@@ -25,3 +25,32 @@
 		}
 	}
 }
+
+
+// .section {
+// 	@apply relative z-10 overflow-hidden border-b border-stroke pb-16 pt-24 md:pt-28;
+
+// 	> .heading {
+// 		@apply text-4xl font-bold tracking-tight md:text-5xl;
+
+// 		> span {
+// 			@apply text-blue-600;
+// 		}
+// 	}
+
+// 	> .description {
+// 		@apply text-lg text-muted-foreground;
+// 	}
+
+// 	button {
+// 		> svg {
+// 			@apply size-4 ml-2 transition-all;
+// 		}
+
+// 		&:hover {
+// 			> svg {
+// 				@apply ml-3;
+// 			}
+// 		}
+// 	}
+// }

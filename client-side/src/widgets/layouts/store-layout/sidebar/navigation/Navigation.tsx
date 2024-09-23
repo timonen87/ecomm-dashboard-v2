@@ -10,11 +10,11 @@ import {
 } from 'lucide-react'
 import { useParams } from 'next/navigation'
 
-import { STORE_URL } from '@/config/url.config'
 
 import { MenuItem } from './MenuItem'
 import styles from './Navigation.module.scss'
 import { IMenuItem } from './menu.interface'
+import { STORE_URL } from '@//shared/config/url.config'
 
 export function Navigation() {
 	const params = useParams<{ storeId: string }>()

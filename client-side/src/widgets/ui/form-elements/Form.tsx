@@ -12,9 +12,10 @@ import {
 	useFormContext
 } from 'react-hook-form'
 
-import { cn } from '../../../utils/clsx'
+
 
 import { Label } from './Label'
+import { cn } from '@//shared/utils/clsx'
 
 const Form = FormProvider
 

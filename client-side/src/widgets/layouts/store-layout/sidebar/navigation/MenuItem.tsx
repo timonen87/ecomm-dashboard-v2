@@ -3,10 +3,11 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { cn } from '@/utils/clsx'
+
 
 import styles from './Navigation.module.scss'
 import { IMenuItem } from './menu.interface'
+import { cn } from '@//shared/utils/clsx'
 
 interface MenuItemProps {
 	route: IMenuItem

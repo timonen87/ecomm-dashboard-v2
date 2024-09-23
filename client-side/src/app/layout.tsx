@@ -1,8 +1,11 @@
 import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes'
 
-import { SITE_DESCRIPTION, SITE_NAME } from './../shared/constants/seo.constants'
-
+import {
+	SITE_DESCRIPTION,
+	SITE_NAME
+} from './../shared/constants/seo.constants'
 import './globals.scss'
 import { Providers } from './providers'
 
@@ -21,8 +24,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={GeistSans.variable}>
-				<Providers>{children}</Providers>
+			{/* <body className={GeistSans.variable}> */}
+			<body
+				className={`bg-[#FCFCFC] dark:bg-black ${GeistSans.variable}`}
+			>
+				<ThemeProvider
+					attribute='class'
+					enableSystem={false}
+					defaultTheme='dark'
+				>
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	)

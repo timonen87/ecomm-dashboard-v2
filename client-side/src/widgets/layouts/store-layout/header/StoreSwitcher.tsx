@@ -4,26 +4,14 @@ import { ChevronsUpDown, Plus, StoreIcon } from 'lucide-react'
 import { useParams, useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-import { Button } from '@/components/ui/Button'
-import {
-	Command,
-	CommandEmpty,
-	CommandGroup,
-	CommandInput,
-	CommandItem,
-	CommandList,
-	CommandSeparator
-} from '@/components/ui/Command'
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger
-} from '@/components/ui/Popover'
-import { CreateStoreModal } from '@/components/ui/modals/CreateStoreModal'
 
-import { STORE_URL } from '@/config/url.config'
-
-import { IStore } from '@/shared/types/store.interface'
+import { STORE_URL } from '@//shared/config/url.config'
+import { Button } from '@//shared/ui/button'
+import { IStore } from '@//shared/types/store.interface'
+import { CreateStoreModal } from '@//widgets/ui/modals/CreateStoreModal'
+import { Popover, PopoverContent } from '@//widgets/ui/Popover'
+import { PopoverTrigger } from '@radix-ui/react-popover'
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@//widgets/ui/Command'
 
 interface StoreSwitcherProps {
 	items: IStore[]

@@ -1,9 +1,6 @@
 import { type PropsWithChildren, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-import { useCreateStore } from '@/hooks/queries/stores/useCreateStore'
-
-import { IStoreCreate } from '@/shared/types/store.interface'
 
 import { Button } from '../Button'
 import {
@@ -23,6 +20,7 @@ import {
 	FormMessage
 } from '../form-elements/Form'
 import { Input } from '../form-elements/Input'
+import { IStoreCreate } from '@//shared/types/store.interface'
 
 export function CreateStoreModal({ children }: PropsWithChildren<unknown>) {
 	const [isOpen, setIsOpen] = useState(false)
