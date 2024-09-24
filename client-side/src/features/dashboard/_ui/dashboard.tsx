@@ -15,7 +15,7 @@ import { formatDate } from '@//shared/utils/date/format-date'
 import { formatPrice } from '@//shared/utils/string/format-price'
 
 import styles from './Dashboard.module.scss'
-import { IOrderColumn, orderColumns } from './orders-columns'
+import { IOrderColumn, orderColumns } from '../orders-columns'
 
 export default function Dashboard() {
 	const router = useRouter()

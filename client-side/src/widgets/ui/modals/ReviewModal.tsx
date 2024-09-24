@@ -6,7 +6,7 @@ import { useCreateReview } from '@/hooks/queries/reviews/useCreateReview'
 
 import { IReviewInput } from '@/shared/types/review.interface'
 
-import { Button } from '../Button'
+import { Button } from '../button'
 import {
 	Dialog,
 	DialogContent,

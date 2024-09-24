@@ -8,6 +8,8 @@ import * as React from 'react'
 
 
 import { Dialog, DialogContent } from './Dialog'
+import { cn } from '@//shared/utils/clsx'
+
 
 const Command = React.forwardRef<
 	React.ElementRef<typeof CommandPrimitive>,

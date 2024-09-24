@@ -70,6 +70,7 @@ export default function Header() {
 											<Link href={DASHBOARD_URL.home()}>
 												{user.avatar ? (
 													<Image
+                                                    className='rounded-full'
 														src={user.avatar}
 														alt={user.name}
 														width={42}

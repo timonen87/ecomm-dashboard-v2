@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { cn } from '@/utils/clsx'
 
-import { Button } from '../../Button'
+import { Button } from '../../button'
 
 import styles from './ImageUpload.module.scss'
 import { useUpload } from './useUpload'

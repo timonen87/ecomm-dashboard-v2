@@ -2,7 +2,7 @@ import { type PropsWithChildren, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 
-import { Button } from '../Button'
+import { Button } from '../button'
 import {
 	Dialog,
 	DialogContent,

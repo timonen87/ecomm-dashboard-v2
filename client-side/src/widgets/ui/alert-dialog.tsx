@@ -5,7 +5,7 @@ import * as React from 'react'
 
 import { cn } from '@/utils/clsx'
 
-import { buttonVariants } from './Button'
+import { buttonVariants } from './button'
 
 const AlertDialog = AlertDialogPrimitive.Root
 
