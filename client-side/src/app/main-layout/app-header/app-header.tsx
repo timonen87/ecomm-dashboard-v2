@@ -1,21 +1,16 @@
 'use client'
 
-import { ArrowRight, LogOut } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import {Loader } from '@//widgets/ui/Loader'
 import { useProfile } from '@//etities/user/queries/use-profile'
-import { saveTokenStorage } from '@//features/auth/auth-token.service'
-import { authService } from '@//features/auth/auth.service'
-import { Button } from '@//shared/ui/button'
-
-import { Logo } from './_ui/logo'
 import { MenuNav } from './_ui/menu-nav'
 import ThemeToggler from './theme-toggle'
 import Image from 'next/image'
 import { DASHBOARD_URL } from '@//shared/config/url.config'
+import { Logo } from './_ui/logo'
 
-export default function Header() {
+export default function 	Header() {
     const { user, isLoading } = useProfile()
 	// Sticky Navbar
 	const [sticky, setSticky] = useState(false)
@@ -69,13 +64,15 @@ export default function Header() {
 										<>
 											<Link href={DASHBOARD_URL.home()}>
 												{user.avatar ? (
-													<Image
-                                                    className='rounded-full'
-														src={user.avatar}
-														alt={user.name}
-														width={42}
-														height={42}
-													/>
+													user.name
+													
+													// <Image
+                                                    // className='rounded-full'
+													// 	src={user.avatar}
+													// 	alt={user.name}
+													// 	width={42}
+													// 	height={42}
+													// />
 												) : (
 													user.name
 												)}
@@ -86,7 +83,7 @@ export default function Header() {
 
 								<div>
 									<ThemeToggler />
-								</div>
+								</div>		
 							</div>
 						</div>
 					</div>

@@ -8,27 +8,23 @@ import {
 	REHYDRATE,
 	persistStore
 } from 'redux-persist'
-
-
 import storage from 'redux-persist/lib/storage'
+
 import { cartSlice } from './cart/cart.slice'
 
-
 const persistConfig = {
-    key: 'ecomm-shop',
-    storage,
-    whiteList: ['cart']
+	key: 'ecomm-shop',
+	storage,
+	whiteList: ['cart']
 }
-
 
 const isClient = typeof window !== 'undefined'
 
 const combinedReducers = combineReducers({
-    cart: cartSlice.reducer
+	cart: cartSlice.reducer
 })
 
 let mainReducer = combinedReducers
-
 
 if (isClient) {
 	const { persistReducer } = require('redux-persist')
@@ -36,7 +32,6 @@ if (isClient) {
 
 	mainReducer = persistReducer(persistConfig, combinedReducers)
 }
-
 
 export const store = configureStore({
 	reducer: mainReducer,

@@ -1,17 +1,13 @@
 import axios, { CreateAxiosDefaults } from 'axios'
 
-
-
-// import {
-// 	getAccessToken,
-// 	removeFromStorage
-// } from '@/services/auth/auth-token.serice'
-// import { authService } from '@/services/auth/auth.service'
+import {
+	getAccessToken,
+	removeFromStorage
+} from '@//features/auth/auth-token.service'
+import { authService } from '@//features/auth/auth.service'
+import { SERVER_URL } from '@//shared/config/api.config'
 
 import { errorCatch, getContentType } from './api.hepler'
-import { SERVER_URL } from '@//shared/config/api.config'
-import { authService } from '@//features/auth/auth.service'
-import { getAccessToken, removeFromStorage } from '@//features/auth/auth-token.service'
 
 const options: CreateAxiosDefaults = {
 	baseURL: SERVER_URL,

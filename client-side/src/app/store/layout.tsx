@@ -1,4 +1,4 @@
-import { StoreLayout } from '@//widgets/layouts/store-layout/store-layout'
+import { StoreLayout } from '@//app/store-layout/store-layout'
 import type { PropsWithChildren } from 'react'
 
 

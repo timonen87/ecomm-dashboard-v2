@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { useProfile } from '../../../../etities/user/queries/use-profile'
+import { useProfile } from '../../../etities/user/queries/use-profile'
 import { MobileSidebar } from '../sidebar/MobileSidebar'
 import { DASHBOARD_URL } from '@//shared/config/url.config'
 import { Loader } from '@//widgets/ui/Loader'
@@ -23,19 +23,19 @@ export function Header() {
 				) : (
 					user && (
 						<>
-							<StoreSwitcher items={user.stores} />
-							<Link href={DASHBOARD_URL.home()}>
-								{user.avatar ? (
-									<Image
-										src={user.avatar}
-										alt={user.name}
-										width={42}
-										height={42}
-									/>
-								) : (
-									user.name
-								)}
-							</Link>
+<StoreSwitcher items={user.stores} />
+<Link href={DASHBOARD_URL.home()}>
+	{user.avatar ? (
+		<Image
+			src={user.avatar}
+			alt={user.name}
+			width={42}
+			height={42}
+		/>
+	) : (
+		user.name
+	)}
+</Link>
 						</>
 					)
 				)}

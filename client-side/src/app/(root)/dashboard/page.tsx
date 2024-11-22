@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 import { NO_INDEX_PAGE } from '@//shared/constants/seo.constants'
-import Features from '@//widgets/layouts/main-layout/feature'
+import Features from '@//app/main-layout/feature'
 import styles from './Dashboard.module.scss'
 
-import Header from '@//widgets/layouts/main-layout/app-header/app-header'
-import Footer from '@//widgets/layouts/main-layout/footer'
+import Header from '@//app/main-layout/app-header/app-header'
+import Footer from '@//app/main-layout/footer'
 import Dashboard from '@//features/dashboard/_ui/dashboard'
 
 export const metadata: Metadata = {

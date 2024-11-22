@@ -2,16 +2,14 @@ import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
-import Header from '../widgets/layouts/main-layout/app-header/app-header'
-
 import {
 	SITE_DESCRIPTION,
 	SITE_NAME
 } from './../shared/constants/seo.constants'
 import './globals.scss'
+import Header from './main-layout/app-header/app-header'
+import Footer from './main-layout/footer'
 import { Providers } from './providers'
-import Footer from '../widgets/layouts/main-layout/footer'
-
 
 export const metadata: Metadata = {
 	title: {
@@ -32,11 +30,7 @@ export default function RootLayout({
 			<body
 				className={`bg-[#FCFCFC] dark:bg-black ${GeistSans.variable}`}
 			>
-				<Providers>
-
-					{children}
-
-				</Providers>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	)
